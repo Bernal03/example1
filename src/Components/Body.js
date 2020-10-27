@@ -1,15 +1,18 @@
 import React from 'react';
 import './Body.css';
-import { Button } from 'react-bootstrap';
+import { Alert, Button } from 'react-bootstrap';
 
 function Body(props){
-    
-    const mifuncion1=()=>{
-        console.log("Hola desde funcion #1")
-        }
+
+        
+    const mensaje=()=>{
+        return alert("Hola mundo.\n Pd. no pude centrar el header:(")
+      }
+
 
     return(
         <div className="Body">
+            
             <h2>{props.texto1}</h2>
             {
                 props.temas.map((e,index)=>
@@ -17,7 +20,7 @@ function Body(props){
                 )
             }
 
-<Button variant="primary" onClick={()=>this.mifuncion1()}>Boton #1</Button>
+        <Button onClick={()=>mensaje()}>Click aqui</Button>
 
         </div>
     )
